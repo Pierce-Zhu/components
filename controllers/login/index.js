@@ -174,11 +174,6 @@ module.exports = function(router) {
 		});
 	});
 
-	
-	// router.get('/pay_pwd', auth.need_login, function(req, res) {
-	// 	res.render('login/pay_pwd');
-	// });
-
 	router.get('/logout', auth.need_login, function(req, res) {
 		req.session.destroy();
 		res.redirect('/');
