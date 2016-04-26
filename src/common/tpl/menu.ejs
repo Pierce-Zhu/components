@@ -1,0 +1,20 @@
+<!-- 
+	@require "../static/menu.css"
+ -->
+<ul class="left-menu">
+	<li><a href="/">回到首页</a></li>
+	<li class="has-sub-menu <% if(_page_ == 'jpb' || _page_ == 'ypb'){%> active<%}%>"><a href="#">xxxx产品</a></li>
+	<li class="sub-left-menu">
+		<ul>
+			<li class="<% if(_page_ == 'jpb'){%> active<%}%>"><a href="/product/jpb">xxxxxxxx</a></li>
+			<li class="<% if(_page_ == 'ypb'){%> active<%}%>"><a href="/product/ypb">xxxxxxxx</a></li>
+			<li class="<% if(_page_ == 'spb'){%> active<%}%>"><a href="/product/spb">xxxxxxxx</a></li>
+			<li class="<% if(_page_ == 'rpb'){%> active<%}%>"><a href="/product/rpb">xxxxxxxx</a></li>
+		</ul>
+		<em class="left-menu-separator"></em>
+	</li>
+	<li class="<% if(_page_ == 'hd'){%> active<%}%>"><a href="/activity">xxxxxx</a></li>
+	<li class="<% if(_page_ == 'lc'){%> active<%}%>"><a href="/account/finance">xxxxxx</a></li>
+	<li class="<% if(_page_ == 'vip'){%> active<%}%>"><a href="/vip">xxxxxx</a></li>
+	<li class="<% if(_page_ == 'setting'){%> active<%}%>"><a href="/account/setting">xxxxxx</a></li>
+</ul>

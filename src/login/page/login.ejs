@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--inline[../../common/page/head.ejs]-->
+	<meta name="description" content="xxxxxxxx">
+	<meta name="keywords" content="xxxxxxxx">
+	<title>xxxxxxxx</title>
+</head>
+<body>
+	<% var _page_ = 'account';%>
+	<!--inline[../../common/page/header.ejs]-->
+	<!--inline[../../common/tpl/navbar.ejs]-->
+	<!--
+		@require "../../common/static/tabbable-line.css"
+		@require "../static/login.css"
+		@require "../../common/static/js/validator.js" 
+		@require "../static/register.js"
+		@require "../static/login.js"
+	 -->
+	<div class="main-bg">
+		<div class="container">
+			<div class="col-xs-4 col-xs-offset-8 tabbable-line login-wrap">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="col-xs-6 <%- locals._m_type=='login'? 'active' : '' %>
+						" >
+						<a href="#login" role="tab" data-toggle="tab">
+							<span>登录</span>
+						</a>
+					</li>
+					<li role="presentation"  class="col-xs-6 <%- locals._m_type=='register'? 'active' : '' %>
+						">
+						<a href="#register" role="tab" data-toggle="tab">
+							<span>注册</span>
+						</a>
+					</li>
+				</ul>
+				<div class="tab-content" style="padding:15px">
+					<div role="tabpanel" class="tab-pane <%- locals._m_type=='login'? 'active' : '' %>
+						" id="login">
+						<p class="text-danger text-center">
+							<%- locals._m_type == 'login' ? locals.error : ''%></p>
+						<form role="form" id="login_form" action="/account/login" method="post">
+							<div class="form-group">
+								<label for="mobile_l">手机号</label>
+								<div class="input-group has-feedback">
+									<span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i>
+									</span>
+									<input type="tel" class="form-control" name="mobile" id="mobile_l" placeholder="请输入手机号"></div>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="pwd_l" style="width:100%">
+									密码
+									<a href="/account/forgot_pwd" class="pull-right">忘记密码?</a>
+								</label>
+								<div class="input-group">
+									<span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i>
+									</span>
+									<input type="password" class="form-control" name="pwd" id="pwd_l" placeholder="请输入密码"></div>
+							</div>
+							<input type="hidden" name="_csrf" value="<%-locals._csrf%>">
+							<input type="hidden" name="_callback" value="0" autocomplete="off">
+							<button type="submit" class="btn btn-danger btn-block">登录</button>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane <%- locals._m_type=='register'? 'active' : '' %>
+						" id="register" style="margin-right:2px;">
+						<p class="text-danger text-center">
+							<%- locals._m_type == 'register' ? locals.error : ''%></p>
+						<form role="form" id="register_form" action="/account/register" method="post">
+							<div class="form-group has-feedback">
+								<label for="mobile_r">手机号</label>
+								<input type="tel" class="form-control" name="mobile" id="mobile_r" placeholder="请输入手机号">
+								<span class="glyphicon form-control-feedback" title="手机号格式不正确"></span>
+							</div>
+							
+							<div class="form-group">
+							<label for="cc_image">验证码</label>
+							  <div class="input-group">
+								  <input type="text" class="form-control" name="cc_image" autocomplete="off" id="cc_image" placeholder="输入右侧验证码">
+								  <span class="input-group-btn" style="cursor: pointer">
+								  	 <img id="cc_img" src="/common/cc?type=mobile&rc=<%= Math.floor(Math.random() * 10000)%>" alt="点击切换验证码">
+								  </span>
+							  </div>
+							</div>
+
+							<div class="form-group">
+								<label for="checkcode">手机验证码</label>
+								<div class="input-group">
+									<input type="text" class="form-control" name="checkcode" autocomplete="off" id="checkcode" placeholder="点击右侧“获取验证码”">
+									<span class="input-group-btn">
+										<button id="get_checkcode" class="btn btn-default" type="button">获取验证码</button>
+									</span>
+								</div>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="pwd_r">密码</label>
+								<input type="password" class="form-control" name="pwd" id="pwd_r" placeholder="请设置6-18位密码">
+								<span class="glyphicon form-control-feedback" title="6-18位密码"></span>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="pwd_d">确认密码</label>
+								<input type="password" class="form-control" id="pwd_d" name="pwd_d" placeholder="请再次输入密码">
+								<span class="glyphicon form-control-feedback" title="必须和上面的密码一致"></span>
+							</div>
+							<div class="form-group has-feedback">
+								<label for="referee">邀请码</label>
+								<input type="mobile" class="form-control" id="referee" autocomplete="off" name="referee" <%= locals.referee ? 'disabled': '' %> value="<%-locals.referee%>" placeholder="推荐人手机号或邀请码"></div>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="agree" checked="checked" disabled>
+									已阅读并同意
+									<a data-toggle="modal" data-target="#xyModal">《xxxxxxxx协议》</a>
+								</label>
+							</div>
+							<input type="hidden" name="_csrf" value="<%-locals._csrf%>">
+							<input type="hidden" name="_callback" value="0" autocomplete="off">
+							<button type="submit" class="btn btn-danger btn-block">注册</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="xyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title text-center" id="myModalLabel">xxxxxxxx</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 此处引入协议文件位置 -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--inline[../../common/page/footer.ejs]-->
+	<!--inline[../../common/page/foot.ejs]-->
+</body>
+</html>

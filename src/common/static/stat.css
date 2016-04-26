@@ -1,0 +1,38 @@
+.stat{
+	display: table;
+	width: 100%;
+	padding: 10px 0;
+}
+
+.stat > div{
+	border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    display: table-cell;
+    /*height: 90px;*/
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 25%;
+}
+
+.stat > div:first-child {
+    border-left: medium none;
+}
+.stat > div:last-child {
+    border-right: medium none;
+}
+
+.stat span.key{
+	display: block;	
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.stat span.value{
+	display: block;	
+	color: #545454;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 8px;
+}

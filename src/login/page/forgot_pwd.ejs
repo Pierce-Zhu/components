@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--inline[../../common/page/head.ejs]-->
+	<meta name="description" content="xxxxxxxx">
+	<meta name="keywords" content="xxxxxxxx">
+	<title>xxxxxxxx</title>
+</head>
+<body>
+	<!--
+		@require "../static/index.css"
+		@require "../static/login.css"
+		@require "../../common/static/js/validator.js" 
+		@require "../static/register.js"
+	 -->
+	<% var _page_ = 'account';%>
+	<!--inline[../../common/page/header.ejs]-->
+	<!--inline[../../common/tpl/navbar.ejs]-->
+	<div class="main-bg">
+		<div class="container">
+			<div class="col-xs-4 col-xs-offset-8 login-wrap">
+				<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">找回密码</h3>
+						</div>
+						<div class="panel-body">
+							<p class="text-danger text-center">
+								<%- locals.error%></p>
+							<form role="form" id="register_form" action="/account/forgot_pwd" method="post">
+								<div class="form-group has-feedback">
+									<label for="mobile_r">手机号</label>
+									<input type="tel" class="form-control" name="mobile" id="mobile_r" placeholder="请输入手机号">
+									<span class="glyphicon form-control-feedback" title="手机号格式不正确"></span>
+								</div>
+								
+								<div class="form-group">
+								<label for="cc_image">验证码</label>
+								  <div class="input-group">
+									  <input type="text" class="form-control" name="cc_image" autocomplete="off" id="cc_image" placeholder="输入右侧验证码">
+									  <span class="input-group-btn" style="cursor: pointer">
+									  	 <img id="cc_img" src="/common/cc?type=mobile&rc=<%= Math.floor(Math.random() * 10000)%>" alt="点击切换验证码">
+									  </span>
+								  </div>
+								</div>
+
+								<div class="form-group">
+									<label for="checkcode">手机验证码</label>
+									<div class="input-group">
+										<input type="text" class="form-control" name="checkcode" autocomplete="off" id="checkcode" placeholder="点击右侧“获取验证码”">
+										<span id="get_checkcode" class="input-group-addon" style="cursor: pointer">获取验证码</span>
+									</div>
+								</div>
+								<div class="form-group has-feedback">
+									<label for="pwd_r">新密码</label>
+									<input type="password" class="form-control" name="pwd" id="pwd_r" placeholder="请设置6-18位密码">
+									<span class="glyphicon form-control-feedback" title="6-18位密码"></span>
+								</div>
+								<div class="form-group has-feedback">
+									<label for="pwd_d">确认新密码</label>
+									<input type="password" class="form-control" name="pwd_d" id="pwd_d" placeholder="请再次输入密码">
+									<span class="glyphicon form-control-feedback" title="必须和上面的密码一致"></span>
+								</div>
+								<input type="hidden" name="_callback" value="0" autocomplete="off">
+								<input type="hidden" name="_csrf" value="<%-locals._csrf%>">
+								<button type="submit" class="btn btn-danger btn-block">提交</button>
+							</form>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--inline[../../common/page/footer.ejs]-->
+<!--inline[../../common/page/foot.ejs]-->
+</body>
+</html>

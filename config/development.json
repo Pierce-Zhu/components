@@ -1,0 +1,79 @@
+{
+	// "mongoConfig": {
+	// 	"host": "192.168.33.10", //修改
+	// 	"database": "aob" //修改
+	// },
+	
+	"restify": "http://localhost:9080",         //服务器ip111
+	"log4jsConfig": "path:./config/log4js_dev.json",
+
+	"tracerConfig": {
+		"type": "colorConsole",
+		"arguments": {
+			"level": "log",
+			"format": "{{timestamp}} <{{title}}> {{path}}:{{line}} \n{{message}}",
+			"dateformat": "HH:MM:ss"
+		}
+	},
+
+	"express": {
+		"view engine": "ejs",
+        "view cache": true,
+        "views": "path:./site/views"
+	},
+
+	"view engines": {
+        "ejs": {
+            "module": "ejs",
+            "renderer": "renderFile"
+        }
+    },
+
+	"middleware": {
+		"static": {
+			"module": {
+				"arguments": ["path:./site"]
+			}
+		},
+
+		"favicon": {
+            "module": {
+                "arguments": ["path:./public/favicon.ico"]
+            }
+        },
+
+		"session": {
+			"enabled": true,
+			"priority": 100,
+			"module": {
+				"name": "express-session",
+				"arguments": [{
+					"key": "",
+					"secret": "6de5191ab3c401bcb266dff913",
+					"cookie": {
+						"path": "/",
+						"httpOnly": true,
+						"maxAge": 1800000
+					},
+					"resave": true,
+					"saveUninitialized": true,
+					"proxy": null
+				}]
+			}
+		},
+
+		"switchOption": {
+			"enabled": true,
+			"priority": 120,
+			"module": {
+				"arguments": [{
+					// "realize": true
+				}]
+			}
+		},
+
+		"serverError": {
+            "enabled": false
+        }
+	}
+}

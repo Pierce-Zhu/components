@@ -1,0 +1,58 @@
+<!--
+	@require "../static/index.css" 
+	@require "../static/header.css"
+	@require "../static/index.js" 
+-->
+<div class="ex-header">
+	<div class="container">
+		<div class="pull-left">
+			<span> <strong><i class="glyphicon glyphicon-earphone"></i>
+					4000-689-360</strong> 
+			</span>
+			 &nbsp;
+			<span>|</span>
+			&nbsp;
+			<a href="http://weibo.com/#" target="_blank">官方微博</a>
+			&nbsp;
+			<span>|</span>
+			&nbsp;
+			<a href="#" class="wechat" id="wechat">官方微信</a>
+		</div>
+		<div class="pull-right">
+			<%if(locals.mobile) {%>
+				<a href="/account/setting">您好:<%= locals.name==null?locals.mobile:locals.name%></a>
+			<%} else {%>
+				<a href="/account/register">免费注册</a>
+			<%}%>
+			&nbsp;
+			<span>|</span>
+			&nbsp;
+			<a href="/doc/help/cjwt">帮助中心</a>
+			&nbsp;
+			<span>|</span>
+			&nbsp;
+			<a href="/doc/about/gsjj">关于xxxx</a>
+		</div>
+	</div>
+</div>
+<div class="header">
+	<div class="container">
+		<a href="/" class="logo">
+			<img height="80" src="../static/image/logo.png">
+		</a>
+		<div class="pull-right">
+			<div class="btn-group btn-group-lg header-btns" role="group">
+			  <% if(locals.mobile) { %>
+			  <a href="/account/finance" class="btn btn-primary">我的理财</a>
+			  <!-- <a class="btn btn-primary" href="/message">消息 <span class="badge">4</span></a> -->
+			  <a href="/account/logout" class="btn btn-danger">退出</a>
+			  <% }else{ %>
+			  <a href="/account/register" class="btn btn-primary">免费注册</a>
+			  <a href="/account/login" class="btn btn-danger">登录</a>
+			  <% } %>
+			  
+			</div>
+		</div>
+	</div>
+</div>
+

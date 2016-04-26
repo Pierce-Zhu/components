@@ -1,0 +1,24 @@
+.ex-header{
+border-bottom:1px solid #e5e5e5;
+/*background-color:#e8e8e8;*/
+color:#707070;
+font-size:14px;
+padding: 5px 0;
+}
+
+.ex-header a {
+  color:#707070;
+}
+
+.header {
+	padding: 10px 0;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.header-btns{
+	margin-top: 20px;
+}
+body{
+    font-family: "Microsoft YaHei" ! important;
+}

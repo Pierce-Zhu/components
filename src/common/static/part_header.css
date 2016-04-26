@@ -1,0 +1,25 @@
+.head-logo a{
+	color: #333;
+}
+.head-logo a:hover{
+	text-decoration: none;
+	color: #333;
+}
+.header {
+	margin: 0 auto;
+	width: 100%;
+	padding: 30px 0 10px;
+	background: #fff;
+}
+.head-logo{
+	background:url(image/logo.png) no-repeat;
+	  background-size: 170px 65px;
+	position: relative;
+}
+.log-right {
+	font-size: 24px;
+	padding: 5px 0px 5px 20px;
+	display: block;
+	margin: 20px 0px 8px 158px;
+	border-left: 1px solid #DBD8D8;
+}

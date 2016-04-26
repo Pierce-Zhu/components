@@ -1,0 +1,74 @@
+<!--
+		@require "../static/index.css" 
+		@require "../static/index.js" 
+		@require "../static/header.css"
+		@require "../static/part_header.css"
+	-->
+	<div class="ex-header">
+		<div class="container">
+			<div class="pull-left">
+				<span> <strong><i class="glyphicon glyphicon-earphone"></i>
+						4000-689-360</strong> 
+				</span>
+				 &nbsp;
+				<span>|</span>
+				&nbsp;
+				<a href="http://weibo.com/5371061117/profile" target="_blank">官方微博</a>
+				&nbsp;
+				<span>|</span>
+				&nbsp;
+				<a href="#" class="wechat" id="wechat">官方微信</a>
+			</div>
+			<div class="pull-right">
+				<%if(locals.mobile) {%>
+					<a href="/account/setting">用户:<%= locals.mobile%></a>
+				<%} else {%>
+					<a href="/account/register">免费注册</a>
+				<%}%>
+				&nbsp;
+				<span>|</span>
+				&nbsp;
+				<a href="/doc/help/cjwt">帮助中心</a>
+				&nbsp;
+				<span>|</span>
+				&nbsp;
+				<a href="/doc/about/gsjj">关于E票宝</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="container">
+			<div class="row col-xs-12" style="">
+				<div class="col-xs-4 head-logo" style="">
+					<a href="/" style="display:block;">
+						<span class="log-right"><%= title=='cjwt' ? '常见问题' : (title=='xwgg' ? '新闻公告' : '服务协议')%></span>
+					</a>
+				</div>
+				
+				<div class="col-xs-8 pull-right">
+					<div class="col-xs-9 col-xs-offset-3" style="padding-top:15px;">
+						<!-- <div class="input-group">
+						<input type="text" class="form-control" placeholder="输入要搜索的关键词">
+						<span class="input-group-btn">
+							<button class="btn btn-danger" type="button">搜索</button>
+						</span>
+						</div> -->
+						<!-- <p>
+							<label>热点：</label>
+				    		<span>
+								<a href="#">取现</a>
+								<a href="#">安全</a>
+								<a href="#">收益</a>
+								<a href="#">购买</a>
+								<a href="#">到账</a>
+								<a href="#">风险</a>
+								<a href="#">兑换</a>
+				            </span>
+				        </p> -->
+						
+			    	</div>
+				</div>
+			</div>
+		</div>
+	</div>

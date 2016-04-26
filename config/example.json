@@ -1,0 +1,74 @@
+/* 不要修改该文件，在同级目录下使用以下内容新建development.json，修改相应的配置*/
+{
+    "mongoConfig": {
+        "host": "xxxxxx", //修改
+        "database": "aob" //修改
+    },
+
+    "tracerConfig": {
+        "type": "colorConsole",
+        "arguments": {
+            "level": "log",
+            "format": "{{timestamp}} <{{title}}> {{path}}:{{line}} \n{{message}}",
+            "dateformat": "HH:MM:ss"
+        }
+    },
+
+    "express": {
+        "view cache": false
+    },
+
+    "middleware": {
+        "static": {
+            "module": {
+                "arguments": ["path:./dist"]
+            }
+        },
+
+        "session": {
+            "enabled": true,
+            "priority": 100,
+            "module": {
+                "name": "express-session",
+                "arguments": [{
+                    "key": "",
+                    "secret": "6de5191ab3c401bcb266dff913",
+                    "cookie": {
+                        "path": "/",
+                        "httpOnly": true,
+                        "maxAge": 1800000
+                    },
+                    "resave": true,
+                    "saveUninitialized": true,
+                    "proxy": null
+                }]
+            }
+        },
+
+        "switchOption": {
+            "enabled": true,
+            "priority": 120,
+            "module": {
+                "arguments": [{
+                    // "realize": true
+                }]
+            }
+        },
+
+        "serverError": {
+            "enabled": true,
+            "priority": 140,
+            "module": {
+                "name": "kraken-middleware/lib/500",
+                "arguments": ["error/500", {
+                    "type": "colorConsole",
+                    "arguments": {
+                        "level": "error",
+                        "format": "{{timestamp}} <{{title}}> {{path}}:{{line}} \n{{message}}",
+                        "dateformat": "HH:MM:ss"
+                    }
+                }]
+            }
+        }
+    }
+}
