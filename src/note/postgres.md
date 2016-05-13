@@ -3,13 +3,16 @@
 * createdb mydb 创建数据库
 * create table mytable(name varchar(10),pwd varchar(20));创建表
 * drop table xx
-* 外键 你想确保没有人可以在A表里插入一条在B表里没有匹配记录的数据行。这就叫维护你的表的参考完整性。这个方法有许多问题，而且非常不便，因此 PostgreSQL 可以为你做这些。
+* 外键 你想确保没有人可以在A表里插入一条在B表里没有匹配记录的数据行。这就叫维护你的表的参考完整性。这个方法有许多问题，而且非常不便，因此 PostgreSQL 可以为你做这些。  <br>
 CREATE TABLE cities (                           <br>
         city            varchar(80) primary key,<br>
         location        point                   <br>
-);
+);												<br>
 CREATE TABLE weather (							<br>
         city            varchar(80) references cities(city),	<br>
         temp_lo         int,									<br>
         temp_hi         int,									<br>
 );																<br>
+*  向表中添加行INSERT INTO weather VALUES ('San Francisco', 46, 50, 0.25, '1994-11-27');  <br>
+   或者INSERT INTO weather (city, temp_lo, temp_hi, prcp, date) VALUES ('San Francisco', 43, 57, 0.0, '1994-11-29');
+*  一个聚集函数从多个输入行中计算出一个结果。 比如，我们有在一个行集合上计算 count（数目）， sum（和），avg（均值）， max（最大值）和min（最小值）的函数 <br>  SELECT max(temp_lo) FROM weather;
