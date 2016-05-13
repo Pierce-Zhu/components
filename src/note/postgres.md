@@ -2,14 +2,14 @@
 * 显示所有数据库：psql -U postgres --list
 * createdb mydb 创建数据库
 * create table mytable(name varchar(10),pwd varchar(20));创建表
-* drop table **
+* drop table xx
 * 外键 你想确保没有人可以在A表里插入一条在B表里没有匹配记录的数据行。这就叫维护你的表的参考完整性。这个方法有许多问题，而且非常不便，因此 PostgreSQL 可以为你做这些。
-CREATE TABLE cities (
-        city            varchar(80) primary key,
-        location        point
+CREATE TABLE cities (                           <br>
+        city            varchar(80) primary key,<br>
+        location        point                   <br>
 );
-CREATE TABLE weather (
-        city            varchar(80) references cities(city),
-        temp_lo         int,
-        temp_hi         int,
-);
+CREATE TABLE weather (							<br>
+        city            varchar(80) references cities(city),	<br>
+        temp_lo         int,									<br>
+        temp_hi         int,									<br>
+);																<br>
