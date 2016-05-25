@@ -23,3 +23,4 @@
 		line-height: 30px;
 		text-align: right;
 	}		
+* border-radius: 5px 5px 0 0;上面两个角为圆角。
