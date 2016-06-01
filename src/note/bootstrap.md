@@ -24,3 +24,7 @@
 		text-align: right;
 	}		
 * border-radius: 5px 5px 0 0;上面两个角为圆角。
+* input背景颜色透明	background-color:transparent;
+* 背景色渐变    background: -webkit-linear-gradient(top,#9CD463,#457002);
+	background:-moz-linear-gradient(top,#9CD463,#457002);
+    background:-o-linear-gradient(top,#9CD463,#457002);
