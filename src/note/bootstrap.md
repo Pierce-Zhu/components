@@ -28,3 +28,7 @@
 * 背景色渐变    background: -webkit-linear-gradient(top,#9CD463,#457002);
 	background:-moz-linear-gradient(top,#9CD463,#457002);
     background:-o-linear-gradient(top,#9CD463,#457002);
+* 去除a的效果 <br> a {
+	text-decoration: none !important;
+	color: rgb(137,137,137);
+}

@@ -8,3 +8,7 @@
 
 npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
 node-inspector是通过websocket方式来转向debug输入输出的。因此，我们在调试前要先启动node-inspector来监听Nodejs的debug调试端口。 <br>
+
+* 使用forEach前最好先对数据进行处理一下，以免出错，:<br>	
+	<% var cards = locals.cards || [];%> <br>
+	<% cards.forEach(function(v,i){%>
