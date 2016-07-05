@@ -4,3 +4,19 @@
 * domManip()是jQuery DOM操作的核心数,  DOM操作的核心buildFragment
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加<script>标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段。
+* jquery1.6*源码19-21行	防止document之类的全局变量被其他插件修改，因此引入了window来正确定义闭包体内的document、navigator、location  <br>       
+22-950行	jQuery的核心工具函数  <br>  
+952-1149行	异步队列  <br>  
+1150-1405行	浏览器测试  <br>  
+1406-1733行	数据缓存 data  <br>  
+1734-1905行	队列  <br>  
+1906-2535行	属性操作  <br>  
+2536-3729行	事件处理  <br>  
+3738-5152行	选择器sizzle  <br>  
+5153-5482行	dom遍历  <br>  
+5487-6247行	dom操作  <br>  
+6251-6619行	CSS操作  <br>  
+6623-7981行	异步请求  <br>  
+7985-8600行	动画FX  <br>  
+8604-8976行	坐标和大小  <br>  
+8980行	window.jQuery = window.$ = jQuery;将jQuery转变为全局对象  <br>  
