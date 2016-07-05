@@ -3,9 +3,8 @@
 * Sizzle是jQuery的御用选择器引擎，是jQuery作者JohnResig写的DOM选择器引擎，速度号称业界第一。另外，Sizzle是独立的一部分，不依赖任何库，如果你不想用jQuery,可 以只用Sizzle
 * domManip()是jQuery DOM操作的核心数,  DOM操作的核心buildFragment
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加<script>标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
-* DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段。
-* jquery1.6*源码19-21行	防止document之类的全局变量被其他插件修改，因此引入了window来正确定义闭包体内的document、navigator、location  <br>       
-22-950行	jQuery的核心工具函数  <br>  
+* DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段
+* jquery1.6*源码19-21行	防止document之类的全局变量被其他插件修改，因此引入了window来正确定义闭包体内的document、navigator、location  <br> 22-950行	jQuery的核心工具函数  <br>  
 952-1149行	异步队列  <br>  
 1150-1405行	浏览器测试  <br>  
 1406-1733行	数据缓存 data  <br>  
