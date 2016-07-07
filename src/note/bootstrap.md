@@ -32,3 +32,4 @@
 	text-decoration: none !important;
 	color: rgb(137,137,137);
 }
+* 左右居中，text-align :center
