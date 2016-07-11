@@ -20,5 +20,5 @@ CREATE TABLE weather (							<br>
 );																<br>
 * 相关联的两个表，两个表中所有字段显示，select * from user_info,user_money;显示字段顺序会按照from后面的表排列顺序。<br>
    如果要根据相同的字段进行排列，SELECT * FROM weather, cities WHERE city = name;这里city和nam都是存储的城市名，分属于两个表。
-* 
+* 链表查询
 
