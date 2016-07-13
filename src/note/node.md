@@ -14,4 +14,4 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 	<% cards.forEach(function(v,i){%>
 
 * uncaughtException Can't set headers after they are sent<br>
-** 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase保证逻辑上的互斥性，使代码不会相互干扰。
+	* 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase，保证罗家的互斥性，使代码不会相互干扰。
