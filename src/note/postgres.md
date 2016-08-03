@@ -1,8 +1,7 @@
-
 * mac 虚拟机 终端 docker 进入 postgres：docker exec -it 数据库名（docker_postgres_1） /bin/bash
 * 显示所有数据库：psql -U postgres --list
 * createdb mydb 创建数据库
-* 清除表数据delete from user_info;
+* 清除表数据delete from user_info;删除一条数据delete from t_user where user_id='12345'; 
 * create table mytable(name varchar(10),pwd varchar(20));创建表
 * drop table xx
 *  向表中插入数据INSERT INTO commission VALUES ('6af9ddd4191e4e9ba365b026ca88880c','2016-05-12 11:31:08',50.00000 ,34.99000,50.00000, '13618321841');  <br>
@@ -28,4 +27,11 @@ CREATE TABLE weather (							<br>
 	where balalba <br>
 	group by user_id<br>
 	having (进一步过滤)
+
+
+*查询实例一 <br>
+select a.mobile as 电话, a.name as 姓名, b.trade_no as 交易号码, b.type 交易类型, b.amount as 金额, b.status as 状态, b.date as 日期, b.order_no as 订单号, b.bank_account as 银行卡号, c.type 产品类型, c.no 产品期数 from 
+user_info as a, trade as b, product as c where
+a.user_id = b.user_id and b.date >= '2016-07-25 00:00:00' and b.date <= '2016-08-01 00:00:00' and
+b.product_no = c.product_no
 
