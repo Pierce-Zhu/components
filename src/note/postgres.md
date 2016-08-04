@@ -17,21 +17,5 @@ CREATE TABLE weather (							<br>
         temp_lo         int,									<br>
         temp_hi         int,									<br>
 );																<br>
-* 联表查询：
-	* 1.相关联的两个表，两个表中所有字段显示，select * from user_info,user_money;显示字段顺序会按照from后面的表排列顺序。<br>
-   如果要根据相同的字段进行排列，SELECT * FROM weather, cities WHERE city = name;这里city和nam都是存储的城市名，分属于两个表。
-	* 2.时间要用引号  select a.name, a.mobile, b.ypb_freeze from user_info as a, user_money as b
-    where b.ypb_freeze >= 10000 and register_time >= '2015-12-12 00:00:00' and a.user_id = b.user_id
-	* 3。子查询select * from invest where user_id in(select user_id from user_info where invest_time > '2016-02-02') and balabala
-	* 4.另一种链表查询(left join 表示左边的表是主表)select * from invest as a left join produce as b on a.user_id = b.user_id left join receipt as c on b.user_id = c.user_id<br>
-	where balalba <br>
-	group by user_id<br>
-	having (进一步过滤)
 
-
-*查询实例一 <br>
-select a.mobile as 电话, a.name as 姓名, b.trade_no as 交易号码, b.type 交易类型, b.amount as 金额, b.status as 状态, b.date as 日期, b.order_no as 订单号, b.bank_account as 银行卡号, c.type 产品类型, c.no 产品期数 from 
-user_info as a, trade as b, product as c where
-a.user_id = b.user_id and b.date >= '2016-07-25 00:00:00' and b.date <= '2016-08-01 00:00:00' and
-b.product_no = c.product_no
 
