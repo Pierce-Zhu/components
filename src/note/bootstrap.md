@@ -34,3 +34,11 @@
 }
 * 左右居中，text-align :center
 * 在图片上要放置其他元素进行绝对定位，而且又需要自适应时，这是把图片当做img元素在页面插入比吧图片当做背景更好控制。而且绝对定位偏移时时用百分比就全部用百分比，包括一些按钮的大小。
+* 图标旋转90度 <br>
+.rotate {
+    transform: rotate(90deg);
+	-ms-transform: rotate(90deg); /* Internet Explorer */
+	-moz-transform: rotate(90deg); /* Firefox */
+	-webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+	-o-transform: rotate(90deg); /* Opera */
+}
