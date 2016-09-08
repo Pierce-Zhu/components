@@ -25,3 +25,4 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
         });
     });
 * 获取当前时间 moment().format('YYYY-MM-DD HH:mm:ss')
+* 当较多的sql需要处理时，尽量使用async异步处理，否则代码执行容易出问题。
