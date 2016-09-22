@@ -42,3 +42,4 @@
 	-webkit-transform: rotate(90deg); /* Safari 和 Chrome */
 	-o-transform: rotate(90deg); /* Opera */
 }
+*用表格陈列图片时,如<table><tr><td><img src="xxx"></td></td></table>，当某一项的td空置不放图片时，该出会出现一个border框框，可以对img使用display：none
