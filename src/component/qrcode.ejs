@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js生成二维码</title>
+	<!-- 
+        @require "../static/js/qrcode.js"
+     -->
+</head>
+<body>
+	<div id="qrcode"></div>
+	
+	<script type="text/javascript">
+		//生成二维码
+		var qrcode = new QRCode(document.getElementById("qrcode"), {
+	        width : 110,//设置宽高
+	        height : 110
+	    });
+	    var url_qrcode = 'http://192.168.1.149:3701/account/commission/register?referee=' + mobile + "&name=" + mobile;
+	    console.log('url_qrcode>>>',url_qrcode);
+	    qrcode.makeCode(url_qrcode);
+	</script>
+</body>
+</html>
