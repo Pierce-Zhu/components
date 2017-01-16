@@ -17,10 +17,3 @@ CREATE TABLE weather (							<br>
         temp_lo         int,									<br>
         temp_hi         int,									<br>
 );																<br>
-
-
-select a.no as 期数, a.cur_rate as 利率, b.amount as 票面金额, a.sale_amount as 实际融资额度, a.start_time as 挂票时间, a.end_time as 售罄时间, b.end_date as 票据到期日
-from product as a, receipt as b where 
-a.receipt_no = b.receipt_no
-and a.type = '1' 
-order by a.no
