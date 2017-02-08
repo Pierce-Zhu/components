@@ -4,9 +4,14 @@
 * domManip()是jQuery DOM操作的核心数,  DOM操作的核心buildFragment
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加script标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段
-* 表单提交某个input错误是该input聚焦，并将之前填写值清空
+* 数据类型转换parseInt()，parseFloat()，toString(),字符串转换成数组，array=str.split("");
 * js判断手机操作系统
+* 对字符串机型编码处理，尤其是在url处理中容易出现乱码的情景, encodeURI(_string, "utf-8")
 * 在处理变量相加减时,即使数据库中是Number类型，也一定要使用parseInt()进行处理，否则很容易会被默认按照字符串拼接。
+* promise只有三种状态，未完成，完成(fulfilled)和失败(rejected)。
+** promise的状态可以由未完成转换成完成，或者未完成转换成失败。
+** promise的状态转换只发生一次
+** promise有一个then方法，then方法可以接受3个函数作为参数。前两个函数对应promise的两种状态fulfilled, rejected的回调函数。第三个函数用于处理进度信息
 * jquery1.6*源码19-21行	防止document之类的全局变量被其他插件修改，因此引入了window来正确定义闭包体内的document、navigator、location  <br> 22-950行	jQuery的核心工具函数  <br>  
 952-1149行	异步队列   <br>
 1150-1405行	浏览器测试  <br>  

@@ -1,3 +1,10 @@
+* input透明无边框
+** .form-group form input{
+**    border: none;
+**    background-color: transparent;
+**    outline:medium;
+**    cursor:pointer;
+** }
 * 表单水平排列
  1.加类  form-horizontal  
  2.用删格排列		
