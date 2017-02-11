@@ -8,6 +8,7 @@
 * js判断手机操作系统
 * 对字符串机型编码处理，尤其是在url处理中容易出现乱码的情景, encodeURI(_string, "utf-8")
 * 在处理变量相加减时,即使数据库中是Number类型，也一定要使用parseInt()进行处理，否则很容易会被默认按照字符串拼接。
+* 阻止a标签的跳转： a href="javascript:void(0);" onclick="js_method()"
 * promise只有三种状态，未完成，完成(fulfilled)和失败(rejected)。
 ** promise的状态可以由未完成转换成完成，或者未完成转换成失败。
 ** promise的状态转换只发生一次
