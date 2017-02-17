@@ -1,3 +1,4 @@
+//不兼容ie
     function timeFormat(times) {
         var hour = 0,
             minutes = 0,
