@@ -2,6 +2,7 @@
 * Js有有三部分组成：1）ECMAScript 2) 文档对象模型DOM 3)浏览器对象模型BOM
 * Sizzle是jQuery的御用选择器引擎，是jQuery作者JohnResig写的DOM选择器引擎，速度号称业界第一。另外，Sizzle是独立的一部分，不依赖任何库，如果你不想用jQuery,可 以只用Sizzle
 * domManip()是jQuery DOM操作的核心数,  DOM操作的核心buildFragment
+* js中涉及Number类型的数据进行运算存储时一定要进行类型转换。否则在本次测试环境可能没错，但是在生产环境可能会报错。
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加script标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段
 * 数据类型转换parseInt()，parseFloat()，toString(),字符串转换成数组，array=str.split("");
@@ -11,6 +12,8 @@
 * 阻止a标签的跳转： a href="javascript:void(0);" onclick="js_method()"
 * promise只有三种状态，未完成，完成(fulfilled)和失败(rejected)。
 * n天后的日期moment().add('days',7).format('YYYY年MM月DD日');
+* 区分用户第一次进入页面还是刷新操作，window.name = xx;
+* 0~N 的随机数Math.random()*N;
 ** promise的状态可以由未完成转换成完成，或者未完成转换成失败。
 ** promise的状态转换只发生一次
 ** promise有一个then方法，then方法可以接受3个函数作为参数。前两个函数对应promise的两种状态fulfilled, rejected的回调函数。第三个函数用于处理进度信息
