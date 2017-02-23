@@ -13,6 +13,7 @@
 * promise只有三种状态，未完成，完成(fulfilled)和失败(rejected)。
 * n天后的日期moment().add('days',7).format('YYYY年MM月DD日');
 * 区分用户第一次进入页面还是刷新操作，window.name = xx;
+* Navigator 对象包含有关浏览器的信息;
 * 0~N 的随机数Math.random()*N;
 ** promise的状态可以由未完成转换成完成，或者未完成转换成失败。
 ** promise的状态转换只发生一次
