@@ -1,10 +1,6 @@
-* input透明无边框
-** .form-group form input{
-**    border: none;
-**    background-color: transparent;
-**    outline:medium;
-**    cursor:pointer;
-** }
+css
+======
+
 * 表单水平排列
  1.加类  form-horizontal  
  2.用删格排列		
@@ -16,6 +12,13 @@
     background: -o-linear-gradient(left, #ff9900 0%, #fff 100%);
     background: -ms-linear-gradient(left, #ff9900 0%, #fff 100%);
     background: linear-gradient(to right, #ff9900 0%, #fff 100%);
+* input透明无边框
+    * .form-group form input{
+        * border: none;
+        * background-color: transparent;
+        * outline:medium;
+        * cursor:pointer;
+    * }
 * 背景色渐变    background: -webkit-linear-gradient(top,#9CD463,#457002);
 	background:-moz-linear-gradient(top,#9CD463,#457002);
     background:-o-linear-gradient(top,#9CD463,#457002);
