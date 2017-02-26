@@ -11,8 +11,7 @@ Node
 
 * 1路由：res.locals.A  ,ejs中locals.A  ||| rs.send({'code': -1}),ejs中则为rs.code
 * listen EADDRINUSE   通常是端口被占用。使用pkill node 
-  *查看node端口占用：ps -ef | grep node    <br>
-* 注册调教表单前记得：		req.session.register = null;
+  * 查看node端口占用：ps -ef | grep node    <br>
 * 单元测试，在子模块中npm test,调用测试脚本。 <br>
 * 基于Chrome浏览器的调试器  <br>
 
