@@ -8,3 +8,9 @@ mongo
 * userinfo.find({查询条件}，{返回字段}，{过滤条件}，function(er, data) {});  <br>
 	userinfo.find({}，{}，{'limit': 1, 'sort': $%^$^$^%}，function(er, data) {}); 
 * 过滤：db.collection.find({ "field" : { $gt: value } } ); // greater than : field > value
+* mac /document/vagrant/docker 为共享目录，导入导出表君放在这里。
+* 导出数据
+    * 进入本机vagrant 中,
+    * 执行docker exec -it docker_mongo_1 /bin/bash
+    * cd data/db
+    * mongoexport -d analysis -c staff -o staff.dat
