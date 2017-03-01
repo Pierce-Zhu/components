@@ -1,6 +1,7 @@
-css
+css  &&   bootstrap
 ======
 
+* bootstrap禁止点击空白处：$(‘#myModal’).modal({backdrop: ‘static’, keyboard: false})
 * 表单水平排列
  1.加类  form-horizontal  
  2.用删格排列		
