@@ -8,6 +8,9 @@ mongo
 * userinfo.find({查询条件}，{返回字段}，{过滤条件}，function(er, data) {});  <br>
 	userinfo.find({}，{}，{'limit': 1, 'sort': $%^$^$^%}，function(er, data) {}); 
 * 过滤：db.collection.find({ "field" : { $gt: value } } ); // greater than : field > value
+* 查询2条以后的数据 db.user.find().skip(2);
+* 查询在2-10之间的数据　> db.user.find().limit(10).skip(2);
+* 去掉重复数据 > db.user.distinct('name');
 * mac /document/vagrant/docker 为共享目录，导入导出表君放在这里。
 * 导出数据
     * 进入本机vagrant 中,
