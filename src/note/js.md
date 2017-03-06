@@ -20,6 +20,7 @@ js
 * Navigator 对象包含有关浏览器的信息;
 * 纯JavaScript编写的一个图表库
     * http://www.runoob.com/highcharts/highcharts-tutorial.html
+* 移动端滑动切换，swiper.js  http://www.swiper.com.cn/
 
 * 0~N 的随机数Math.random()*N;
 * promise只有三种状态，未完成(pending)，完成(resolved),拒绝(rejected)
