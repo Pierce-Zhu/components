@@ -11,6 +11,7 @@ mongo
 * 查询2条以后的数据 db.user.find().skip(2);
 * 查询在2-10之间的数据　> db.user.find().limit(10).skip(2);
 * 去掉重复数据 > db.user.distinct('name');
+* annitask.find({'$or':[{'persons': {'$gte': 1}}, {'money': {'$gte': 5000}}]}, function(er, data) {})
 * mac /document/vagrant/docker 为共享目录，导入导出表君放在这里。
 * 导出数据
     * 进入本机vagrant 中,
