@@ -29,6 +29,7 @@
         oDateEnd.setSeconds(0);
         //得到相距的秒数。
         iRemain = (oDateEnd.getTime() - oDateNow.getTime()) / 1000;
+        iRemain = iRemain <= 0 ? 0 : iRemain;
 
         iDay = parseInt(iRemain / 86400);
         iRemain %= 86400;
