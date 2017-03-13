@@ -22,6 +22,8 @@ js
     * http://www.runoob.com/highcharts/highcharts-tutorial.html
 * 移动端滑动切换，swiper.js  http://www.swiper.com.cn/
 * 获取元素data-no的值： var no = $(this).data('no');
+* 异步提交避免使用button
+* $('#province option:selected').text()
 
 * 0~N 的随机数Math.random()*N;
 * promise只有三种状态，未完成(pending)，完成(resolved),拒绝(rejected)
