@@ -45,4 +45,5 @@ js
 6623-7981行	异步请求  <br>  
 7985-8600行	动画FX  <br>  
 8604-8976行	坐标和大小  <br>  
-8980行	window.jQuery = window.$ = jQuery;将jQuery转变为全局对象  <br>  
+8980行	
+* window.jQuery = window.$ = jQuery;将jQuery转变为全局对象  <br>  
