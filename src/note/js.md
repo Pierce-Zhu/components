@@ -10,6 +10,7 @@ js
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加script标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段
 * 数据类型转换parseInt()，parseFloat()，toString(),字符串转换成数组，array=str.split("");
+* js变量是无类型的，用var或let申明，Number类型君存储为浮点型
 * js判断手机操作系统
 * 对字符串机型编码处理，尤其是在url处理中容易出现乱码的情景, encodeURI(_string, "utf-8")
 * 在处理变量相加减时,即使数据库中是Number类型，也一定要使用parseInt()进行处理，否则很容易会被默认按照字符串拼接。
