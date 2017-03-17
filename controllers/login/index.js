@@ -17,15 +17,16 @@ var logger = log4js.getLogger();
 var defaultPaypwd = 'MDEyMzQ1';
 var page_num = 5;
 
-function user_info(req, res, next) {
-	res.locals._ic = !!req.session.name;
-	res.locals._wechat = !!req.session.wechat;
-	res.locals._card = !!req.session.card;
-	next();
-};
+// function user_info(req, res, next) {
+// 	res.locals._ic = !!req.session.name;
+// 	res.locals._wechat = !!req.session.wechat;
+// 	res.locals._card = !!req.session.card;
+// 	next();
+// };
 
 module.exports = function(router) {
 
+	//login
 	router.get('/login', function(req, res) {
 		res.locals._m_type = 'login';
 		res.render('login/login');
@@ -66,6 +67,7 @@ module.exports = function(router) {
 		});
 	});
 
+	//注册
 	router.post('/register', function(req, res) {
 		var bt = new Date().getTime();   //时间戳
 		logger.info('router in ... /login/register'); 
@@ -104,9 +106,9 @@ module.exports = function(router) {
 			}
 			logger.info('register time>>',new Date().getTime() - bt);
 		});
-
 	});
 
+	//忘记密码
 	router.get('/forgot_pwd', function(req, res) {
 		res.render('login/forgot_pwd');
 	});
@@ -147,6 +149,7 @@ module.exports = function(router) {
 		});
 	});
 
+	// 短信验证码
 	router.get('/cc', function(req, res) {
 		if (!req.session._cc_pic_mobile || req.session._cc_pic_mobile.code != req.query.cc_image) {
           res.send({
@@ -174,6 +177,7 @@ module.exports = function(router) {
 		});
 	});
 
+	//退出
 	router.get('/logout', auth.need_login, function(req, res) {
 		req.session.destroy();
 		res.redirect('/');
