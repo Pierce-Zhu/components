@@ -35,6 +35,7 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
             $('#investor-modal').modal('show');
         });
     });
+* eventproxy   管理并发结果，可以理解为计数器的作用
 * 获取当前时间 moment().format('YYYY-MM-DD HH:mm:ss')
 * 需要循操作数据库时用async.eachSeries(data, function(item, cb){})；
 * 当较多的sql需要处理时，尽量使用async异步处理，否则代码执行容易出问题。
