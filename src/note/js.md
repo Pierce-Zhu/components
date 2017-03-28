@@ -48,3 +48,4 @@ js
 8604-8976行	坐标和大小  <br>  
 8980行	
 * window.jQuery = window.$ = jQuery;将jQuery转变为全局对象  <br>  
+* jquery.form.min.js 文件上传
