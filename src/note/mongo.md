@@ -19,3 +19,14 @@ mongo
     * cd data/db
     * mongoexport -d analysis -c staff -o staff.dat
 * docker exec -it common_mongo_1 /bin/bash 进入mongoDB shell
+* User.findOne({name: 'aikin'})
+    .exec(function(err, doc) {
+        var opts = [{
+            path   : 'posts',
+            select : 'title'
+        }];
+        doc.populate(opts, function(err, populatedDoc) {
+            console.log(populatedDoc.posts[0].title);  // post-by-aikin
+        });
+    });
+
