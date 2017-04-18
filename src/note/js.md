@@ -50,3 +50,4 @@ js
 * window.jQuery = window.$ = jQuery;将jQuery转变为全局对象  <br>  
 * jquery.form.min.js 文件上传
 * jquery.jOrgChart.js  异步加载生成组织框架图
+* Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象
