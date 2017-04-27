@@ -21,7 +21,6 @@ docker
     * 从本地文件导入本地镜像库 docker load --input ubuntu_14.tar 或 docker load < ubuntu_14.tar
     * 上传到官方默认库dockerHub: docker push Name[:tag]
 * 容器命令
-
     * docker create新建容器 docker create -it ubuntu:latest
     * docker run 等价于docker create  => docker start
     * docker ps 运行中的容器
