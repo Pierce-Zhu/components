@@ -30,4 +30,5 @@ mongo
             console.log(populatedDoc.posts[0].title);  // post-by-aikin
         });
     });
+* mongo的多种更新写法
 
