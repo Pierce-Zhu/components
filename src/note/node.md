@@ -27,6 +27,12 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 * uncaughtException Can't set headers after they are sent<br>
 	* 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase，保证逻辑的互斥性。
 
+* async.auto的“管道”操作
+  * async.auto({
+    * 'a': function(){},
+    * 'b':['a'，function(cb,param){}]
+  * })
+
 * js异步渲染页面，比如页面中点击不同投资人，然后弹出该投资人详情模态框（数据很多），如何避免直接渲染父页面（消耗大，而且不好实现）？将模态框单独作为新的，页面这时候异步向后台查询，然后渲染模态框页面，最后将渲染后的模态框页面用js添加到父页面。
   $('#table').on('click', 'a[class=userDetail]', function(event) {
         _id = $(this).data('no');
@@ -41,4 +47,4 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 * 需要循操作数据库时用async.eachSeries(data, function(item, cb){})；
 * 当较多的sql需要处理时，尽量使用async异步处理，否则代码执行容易出问题。
 *  使用ajax时，想node层传递参数时，要封装成json格式，即{‘name’: value},如果单传一个value值得花，node会自动封装成{value: ‘’}，导致出错;
-* node excel带出包 util-excel
+* node excel导出包 util-excel
