@@ -27,6 +27,9 @@ js
 * $('#province option:selected').text()
 * 下载window.open(http);
 * 数组push到末尾
+*   $("#verifyForm").on('click', 'a[id="refuse"]', function(event) {
+        $(this).attr('data-target', '#roleModal');
+    });
 
 * 0~N 的随机数Math.random()*N;
 * promise只有三种状态，未完成(pending)，完成(resolved),拒绝(rejected)
