@@ -24,13 +24,17 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 	<% var cards = locals.cards || [];%> <br>
 	<% cards.forEach(function(v,i){%>
 
+* node同事连接多个后台（如java）或者多个数据库配置
+
 * uncaughtException Can't set headers after they are sent<br>
 	* 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase，保证逻辑的互斥性。
 
 * async.auto的“管道”操作
   * async.auto({
     * 'a': function(){},
-    * 'b':['a'，function(cb,param){}]
+    * 'b':['a'，function(cb,param){
+      * param.axxxxxxxxxx
+    * }]
   * })
 
 * js异步渲染页面，比如页面中点击不同投资人，然后弹出该投资人详情模态框（数据很多），如何避免直接渲染父页面（消耗大，而且不好实现）？将模态框单独作为新的，页面这时候异步向后台查询，然后渲染模态框页面，最后将渲染后的模态框页面用js添加到父页面。
