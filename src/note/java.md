@@ -21,4 +21,5 @@
 
 
 * 0初始化为bigdecimal  new BigDecimal(0)；
+* orderBy("txdate").orderBy( "txtime")   连续使用排序，升序
 
