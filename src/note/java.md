@@ -21,5 +21,7 @@
 
 
 * 0初始化为bigdecimal  new BigDecimal(0)；
-* orderBy("txdate").orderBy( "txtime")   连续使用排序，升序
+* 按两个字段排序，升序
+    * orderBy("txdate").orderBy( "txtime") 
+    * .orderBy("bussStatus asc,no desc")  升序
 
