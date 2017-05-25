@@ -7,4 +7,4 @@ mysql
 * 使用连接（JOIN）来代替子查询,left join等
 * 索引
 * sql += " limit " + Number(req.query.start) + ', ' + Number(req.query.length);
-* 查询为空：where a is null 
+* 查询为空：where a is null ,判断不为空可以用 where a !='' 或者 where a is not null
