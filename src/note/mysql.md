@@ -10,3 +10,4 @@ mysql
 * 查询为空：where a is null ,判断不为空可以用 where a !='' 或者 where a is not null
 * 排序时生成序号:
     * set @i := 0;select @i := @i + 1 as num ,allinvest from usercount ORDER BY allinvest desc limit 10
+* case when....按字段范围统计数据
