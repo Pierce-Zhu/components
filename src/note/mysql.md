@@ -11,3 +11,9 @@ mysql
 * 排序时生成序号:
     * set @i := 0;select @i := @i + 1 as num ,allinvest from usercount ORDER BY allinvest desc limit 10
 * case when....按字段范围统计数据
+* 模糊查询：
+    * SELECT * FROM [user] WHERE u_name LIKE '%三%' 
+    * SELECT * FROM [user] WHERE u_name LIKE '_三_' 只找出“唐三藏”这样u_name为三个字且中间一个字是“三”的； 
+    * SELECT * FROM [user] WHERE u_name LIKE '老[1-9]' 将找出“老1”、“老2”、……、“老9”；
+    * SELECT * FROM [user] WHERE u_name LIKE '老[^1-4]'; 将排除“老1”到“老4”，寻找“老5”、“老6”、…
+
