@@ -9,11 +9,9 @@ Node
   * 缺点：
   * 如果PHP代码损坏，不会拖垮整个服务器。 PHP代码只运行在自己的进程范围中，当某个请求显示错误时，它只对特定的请求产生影响。而在Node.js环境中，所有的请求均在单一的进程服务中，当某个请求导致未知错误时，整个服务器都会受到影响。
 
-* 1路由：res.locals.A  ,ejs中locals.A  ||| rs.send({'code': -1}),ejs中则为rs.code
 * listen EADDRINUSE   通常是端口被占用。使用pkill node 
   * 查看node端口占用：ps -ef | grep node    <br>
 * 单元测试，在子模块中npm test,调用测试脚本。 <br>
-* 基于Chrome浏览器的调试器  <br>
 
 既然我们可以通过V8的调试插件来调试，那是否也可以借用Chrome浏览器的JavaScript调试器来调试呢？node-inspector模块提供了这样一种可能。我们需要先通过npm来安装node-inspector   <br>
 
