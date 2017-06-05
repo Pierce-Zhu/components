@@ -60,3 +60,6 @@ js
 * Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象
 * prepend() 方法在被选元素的开头（仍位于内部）插入指定内容，prepend() 和 prependTo() 方法作用相同。
 * js同步 confirm，alert
+* moment获取时间段
+    * moment.duration().days();
+    * moment.duration().asDays();
