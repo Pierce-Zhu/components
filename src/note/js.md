@@ -63,3 +63,4 @@ js
 * moment获取时间段
     * moment.duration().days();
     * moment.duration().asDays();
+    * moment(date).format("YYYY-MM-DD")
