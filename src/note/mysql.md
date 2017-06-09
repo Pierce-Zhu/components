@@ -19,4 +19,5 @@ mysql
     * SELECT * FROM [user] WHERE u_name LIKE '老[^1-4]'; 将排除“老1”到“老4”，寻找“老5”、“老6”、…
 * 修改某字段的指定条数update usercount set sex = '0' limit 1000
 * update usercount set user_id=?,sex=?,reinvestrate=? where user_id='user_id'
+* join 与left join的效率问题
 
