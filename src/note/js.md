@@ -31,7 +31,7 @@ js
 *   $("#verifyForm").on('click', 'a[id="refuse"]', function(event) {
         $(this).attr('data-target', '#roleModal');
     });
-
+* parseInt()向下取整。
 * 0~N 的随机数Math.random()*N;
 * promise只有三种状态，未完成(pending)，完成(resolved),拒绝(rejected)
     * promise的状态可以由未完成转换成完成，或者未完成转换成失败。
@@ -62,6 +62,4 @@ js
 * js同步 confirm，alert
 * moment获取时间段
     * moment.duration().days();
-    * moment.duration().asDays();
-    * moment(date).format("YYYY-MM-DD")
 * 回退网页<a href="javascript:history.go(-1);">返回</a>
