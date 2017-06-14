@@ -63,3 +63,5 @@ js
 * moment获取时间段
     * moment.duration().days();
 * 回退网页<a href="javascript:history.go(-1);">返回</a>
+* $("#materiel").find("tbody").on("change", '.pmater', function(){});
+* $("#materiel").find("tbody").on("keyup", '.materNumb', function(){})
