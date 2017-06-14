@@ -26,6 +26,7 @@ js
 * 获取元素data-no的值： var no = $(this).data('no');
 * 异步提交避免使用button
 * $('#province option:selected').text()
+    * 或者该select的value var value_ = $(this).find("option:selected").val();
 * 下载window.open(http);
 * 数组push到末尾
 *   $("#verifyForm").on('click', 'a[id="refuse"]', function(event) {
