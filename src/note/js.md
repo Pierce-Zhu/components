@@ -67,3 +67,4 @@ js
 * $("#materiel").find("tbody").on("change", '.pmater', function(){});
 * $("#materiel").find("tbody").on("keyup", '.materNumb', function(){})
 * replace(/(^\s*)|(\s*$)/g, "")
+* date = date.replace(/-/g, "");
