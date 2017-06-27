@@ -20,4 +20,5 @@ mysql
 * 修改某字段的指定条数update usercount set sex = '0' limit 1000
 * update usercount set user_id=?,sex=?,reinvestrate=? where user_id='user_id'
 * join 与left join的效率问题
+* left outer join
 
