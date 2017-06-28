@@ -21,4 +21,5 @@ mysql
 * update usercount set user_id=?,sex=?,reinvestrate=? where user_id='user_id'
 * join 与left join的效率问题
 * left outer join
+* round(sum(base_rate+float_rate)/num6,2)
 
