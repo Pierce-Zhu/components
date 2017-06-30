@@ -22,4 +22,5 @@ mysql
 * join 与left join的效率问题
 * left outer join
 * round(sum(base_rate+float_rate)/num6,2)
+* select concat(dname,loc,’aaaa') from A
 
