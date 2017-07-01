@@ -26,7 +26,7 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 	<% cards.forEach(function(v,i){%>
 
 * node同事连接多个后台（如java）或者多个数据库配置
-
+* Nginx最主要的功能是反向代理，负载均衡，是为其他web server服务的。而node.js一般是作为web server使用的，两者的用途不一样，两者的性能比较意义不大。Nginx因为其功能简单，没有太复杂的逻辑，主要解决的I/O (socket)的资源占用(内存，线程)而出名的，它的改进对比对象应该是apache httpd与IIS
 * uncaughtException Can't set headers after they are sent<br>
 	* 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase，保证逻辑的互斥性。
 
