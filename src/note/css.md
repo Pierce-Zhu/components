@@ -39,3 +39,7 @@ css  &&   bootstrap
 	-o-transform: rotate(90deg); /* Opera */
 }
 *用表格陈列图片时,如<table><tr><td><img src="xxx"></td></td></table>，当某一项的td空置不放图片时，该出会出现一个border框框，可以对img使用display：none
+
+* prop与attr的区别
+    * 对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。
+    * 对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。
