@@ -39,6 +39,14 @@ js
     * promise的状态转换只发生一次
     * promise有一个then方法，then方法可以接受3个函数作为参数。前两个函数对应promise的两种状态fulfilled, rejected的回调函数。第三个函数用于处理进度信息
     * Promise要求then会返回一个新的promise
+* 标准的 JavaScript 错误：
+    * <EvalError> : 当调用 eval() 失败时抛出。
+    * <SyntaxError> : 当 JavaScript 语法错误时抛出。
+    * <RangeError> : 当值不在预期范围内时抛出。
+    * <ReferenceError> : 当使用未定义的变量时抛出。
+    * <TypeError> : 当传入错误类型的参数时抛出。
+    * <URIError> : 当全局的 URI 处理函数被误用时抛出。
+
 * jquery1.6*源码19-21行	防止document之类的全局变量被其他插件修改，因此引入了window来正确定义闭包体内的document、navigator、location  <br> 22-950行	jQuery的核心工具函数  <br>  
 952-1149行	异步队列   <br>
 1150-1405行	浏览器测试  <br>  
