@@ -28,9 +28,6 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 
 * node同事连接多个后台（如java）或者多个数据库配置
 * Nginx最主要的功能是反向代理，负载均衡，是为其他web server服务的。而node.js一般是作为web server使用的，两者的用途不一样，两者的性能比较意义不大。Nginx因为其功能简单，没有太复杂的逻辑，主要解决的I/O (socket)的资源占用(内存，线程)而出名的，它的改进对比对象应该是apache httpd与IIS
-* uncaughtException Can't set headers after they are sent<br>
-	* 通常是因为在最后希望res.render渲染页面之前，已经出现了res.render或者res.send，阻塞了最后代码的执行。在每个res.xxxx代码结尾处执行return或者return true/flase，保证逻辑的互斥性。
-
 * async.auto的“管道”操作
   * async.auto({
     * 'a': function(){},
@@ -50,7 +47,6 @@ node-inspector是通过websocket方式来转向debug输入输出的。因此，�
 * eventproxy   管理并发结果，可以理解为计数器的作用
 * superagent  类似于request库，kttp请求，可以看做是服务端的 ajax
 * 获取当前时间 moment().format('YYYY-MM-DD HH:mm:ss')
-* 需要循操作数据库时用async.eachSeries(data, function(item, cb){})；
-* 当较多的sql需要处理时，尽量使用async异步处理，否则代码执行容易出问题。
+* 需要循操作数据库时用async.eachSeries(data, function(item, cb){})
 *  使用ajax时，想node层传递参数时，要封装成json格式，即{‘name’: value},如果单传一个value值得花，node会自动封装成{value: ‘’}，导致出错;
 * node excel导出包 util-excel
