@@ -66,14 +66,13 @@ js
 * $(this).closest('tr')  返回该元素的第一个祖先元素
 * jquery.jOrgChart.js  异步加载生成组织框架图
 * Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象
-* prepend() 方法在被选元素的开头（仍位于内部）插入指定内容，prepend() 和 prependTo() 方法作用相同。
 * js同步 confirm，alert
 * 闭包通俗理解函数返回函数,是能够读取其他函数内部变量的函数。指的是指有权访问另一个函数作用域中变量的函数。
 * moment获取时间段
     * moment.duration().days();
 * 回退网页<a href="javascript:history.go(-1);">返回</a>
 * $("#materiel").find("tbody").on("change", '.pmater', function(){});
-* $("#materiel").find("tbody").on("keyup", '.materNumb', function(){})
+    * $("#materiel").find("tbody").on("keyup", '.materNumb', function(){})
 * replace(/(^\s*)|(\s*$)/g, "")
 * date = date.replace(/-/g, "");
 * new Date().getFullyear();
