@@ -67,7 +67,6 @@ js
 * jquery.jOrgChart.js  异步加载生成组织框架图
 * Object.assign() 方法用于将所有可枚举的属性的值从一个或多个源对象复制到目标对象。它将返回目标对象
 * js同步 confirm，alert
-* 闭包通俗理解函数返回函数,是能够读取其他函数内部变量的函数。指的是指有权访问另一个函数作用域中变量的函数。
 * moment获取时间段
     * moment.duration().days();
 * 回退网页<a href="javascript:history.go(-1);">返回</a>
@@ -75,7 +74,6 @@ js
     * $("#materiel").find("tbody").on("keyup", '.materNumb', function(){})
 * replace(/(^\s*)|(\s*$)/g, "")
 * date = date.replace(/-/g, "");
-* new Date().getFullyear();
 * append() - 在被选元素的结尾插入内容
     * prepend() - 在被选元素的开头插入内容
     * after() - 在被选元素之后插入内容
