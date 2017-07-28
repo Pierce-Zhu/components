@@ -6,7 +6,6 @@ js
 * Js有有三部分组成：1）ECMAScript 2) 文档对象模型DOM 3)浏览器对象模型BOM
 * Sizzle是jQuery的御用选择器引擎，是jQuery作者JohnResig写的DOM选择器引擎，速度号称业界第一。另外，Sizzle是独立的一部分，不依赖任何库，如果你不想用jQuery,可 以只用Sizzle
 * domManip()是jQuery DOM操作的核心数,  DOM操作的核心buildFragment
-* 主程序调用子程序，在子程序中return false 并不能阻断主程序的继续执行。解决办法之一是向子程序传入参数返回给主函数进行判断子程序是否执行成功
 * js中涉及Number类型的数据进行运算存储时一定要进行类型转换。否则在本次测试环境可能没错，但是在生产环境可能会报错。
 * jsonpajax的核心是通过XmlHttpRequest获取非本页内容，而jsonp的核心则是动态添加script标签来调用服务器提供的js脚本，jsonp能够很好地解决跨域问题
 * DOM2.0模型将事件处理流程分为三个阶段：一、事件捕获阶段，二、事件目标阶段，三、事件起泡阶段
