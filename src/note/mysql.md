@@ -23,7 +23,7 @@ mysql
 * left outer join
 * round(sum(base_rate+float_rate)/num6,2)
 * select concat(dname,loc,’aaaa') from A
-* mysql   存储过程的三中变量申明方式
-declare,set,select
+* mysql   存储过程的三中变量申明方式declare,set,select
+* show status like 'last_query_cost';查询开销
 
 
