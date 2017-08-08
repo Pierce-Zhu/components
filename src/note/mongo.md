@@ -19,7 +19,6 @@ mongo
     * 执行docker exec -it docker_mongo_1 /bin/bash
     * cd data/db
     * mongoexport -d analysis -c staff -o staff.dat
-* docker exec -it common_mongo_1 /bin/bash 进入mongoDB shell
 * User.findOne({name: 'aikin'})
     .exec(function(err, doc) {
         var opts = [{
