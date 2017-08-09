@@ -49,3 +49,4 @@ npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
 * 需要循操作数据库时用async.eachSeries(data, function(item, cb){})
 *  使用ajax时，想node层传递参数时，要封装成json格式，即{‘name’: value},如果单传一个value值得花，node会自动封装成{value: ‘’}，导致出错;
 * node excel导出包 util-excel
+* xml解析蛋疼
