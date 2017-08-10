@@ -24,5 +24,6 @@ mysql
 * select concat(dname,loc,’aaaa') from A
 * mysql   存储过程的三中变量申明方式declare,set,select
 * show status like 'last_query_cost';查询开销
+* mysql无法插入中文，navcat设置表编码为urf-8,字段编码设置为空或者utf-8
 
 
