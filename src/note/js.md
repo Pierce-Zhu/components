@@ -78,4 +78,5 @@ js
     * after() - 在被选元素之后插入内容
     * before() - 在被选元素之前插入内容
 * val=$('input:radio[name="sex"]:checked').val();
-* delte a['key']
+* delte a['key'];
+* 给input赋值$('#days1').val(days)或者原生getElementById('xxx').value = xxxx;
