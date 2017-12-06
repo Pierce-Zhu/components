@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id=demo30 style="margin-top: 0px;OVERFLOW: hidden; WIDTH: 200px; HEIGHT: 440px;">
+		<div id=demo40 style="LINE-HEIGHT: 23px; width:100%;">
+			<table width="120" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="left">
+						<a href="http://www.baidu.com" target="_blank"><img src="http://list.image.baidu.com/t/image_category/res/Gangtai/Xu_Xi_Yuan.jpg" onmouseover="this.width='190';this.height=230" onmouseout="this.width='95';this.height=115" border="0" /></a>
+					</td>
+				</tr>
+				<tr>
+					<td align="left"><a href="http://www.baidu.com" target="_blank"><img src="http://list.image.baidu.com/t/image_category/res/Gangtai/Yang_Cheng_Lin.jpg" onmouseover="this.width='190';this.height=230" onmouseout="this.width='95';this.height=115" border="0"/></a>
+					</td>
+				</tr>
+				<tr>
+					<td align="left"><a href="http://www.baidu.com" target="_blank"><img src="http://list.image.baidu.com/t/image_category/res/Gangtai/Ye_Xuan.jpg" onmouseover="this.width='190';this.height=230" onmouseout="this.width='95';this.height=115"  border="0"/></a>
+					</td>
+				</tr>
+				<tr>
+					<td align="left"><a href="http://www.baidu.com" target="_blank"><img src="http://list.image.baidu.com/t/image_category/res/Gangtai/Zhang_Bai_Zhi.jpg" onmouseover="this.width='190';this.height=230" onmouseout="this.width='95';this.height=115"  border="0"/></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					hhahahhahah
+					</td>
+					<td>
+					hhahahhahah
+					</td>
+				</tr>
+				<tr>
+					<td>
+					11111
+					</td>
+					<td>
+					111111
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="demo50"></div>
+	</div>
+<script>
+    var speed=300;
+    var demo50=document.getElementById("demo50");
+    var demo40=document.getElementById("demo40");
+    var demo30=document.getElementById("demo30");
+    demo50.innerHTML=demo40.innerHTML
+    function Marquee(){
+    	console.log("111");
+    	if(demo50.offsetTop-demo30.scrollTop<=0)
+    		{console.log("222");
+    		demo30.scrollTop-=demo40.offsetHeight;
+    	}
+    	else{
+    		console.log("333");
+    	demo30.scrollTop++;
+    	}
+    }
+    var MyMar=setInterval(Marquee,speed);
+    console.log("444");
+    demo30.onmouseover=function(){
+    	console.log("5");
+    	clearInterval(MyMar);
+    }
+    demo30.onmouseout=function(){
+    	console.log("666");
+    	MyMar=setInterval(Marquee,speed);
+	}
+</script>
+</body>
+</html>

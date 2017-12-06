@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>实时滚动显示数据</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	@viewport-height: 300px;
+	.viewport {
+	  height: 300px;
+	  width:300px;
+	  overflow: hidden;
+	  border: 1px solid red;
+	  position: relative;
+	}
+
+	.item {
+	  overflow: hidden;
+	  transition: height 1s;
+	  border-bottom: 1px dashed #CCC;
+	}
+	.inner {
+	  transition: opacity 1s 500ms;
+	}
+
+	.invisible {
+	  position: absolute;
+	  bottom: @viewport-height;
+	}
+</style>
+<body>
+	<div class="viewport">
+		<div class="wrapper">
+			<div class="">
+				
+			</div>
+		</div>
+		<div class="invisible">
+			<div class="measure">
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var $wrapper = document.querySelector('.wrapper');
+		var $measure = document.querySelector('.measure');
+
+		function appendItem(text) {
+		  var $tmp = document.createElement('DIV');
+		  $tmp.innerHTML = text;
+		  $tmp.className = 'inner';
+		  $measure.appendChild($tmp);
+		  var height = window.getComputedStyle($measure).height;   //等同于jQuery的css（）方法
+		  
+		  var $item = document.createElement('DIV');
+		  $item.className = 'item';
+		  $item.style.height = 0;
+		  $tmp.style.opacity = 0;
+		  $item.appendChild($tmp);
+		  $wrapper.insertBefore($item, $wrapper.firstChild);
+		  $item.offsetWidth;
+		  $item.style.height = height;
+		  $tmp.style.opacity = 1;
+		}
+
+		var sentences = '更能消、几番风雨。匆匆春又归去。惜春长恨花开早，何况落红无数。春且住。见说道、天涯芳草迷归路。怨春不语。算只有殷勤，画檐蛛网，尽日惹飞絮。长门事，准拟佳期又误。'.split('。');
+		// var result=[123,aaa,vvv,bbb,444,5566,77777].split('。');
+
+		var p = 0;
+		setInterval(function () {
+		  appendItem(sentences[p++ % sentences.length]);
+		}, 1234);
+	</script>
+</body>
+</html>
+
+
+
