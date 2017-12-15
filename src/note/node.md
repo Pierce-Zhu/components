@@ -45,8 +45,7 @@ npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
     });
 * eventproxy   管理并发结果，可以理解为计数器的作用
 * superagent  类似于request库，kttp请求，可以看做是服务端的 ajax
-* 获取当前时间 moment().format('YYYY-MM-DD HH:mm:ss')
 * 需要循操作数据库时用async.eachSeries(data, function(item, cb){})
 *  使用ajax时，想node层传递参数时，要封装成json格式，即{‘name’: value},如果单传一个value值得花，node会自动封装成{value: ‘’}，导致出错;
 * node excel导出包 util-excel
-* xml解析蛋疼
+* node在单线程，大型web系统中作为的server端存在很多弊端，go某种意义上是很好地替代品
