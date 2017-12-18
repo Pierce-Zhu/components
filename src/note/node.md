@@ -17,13 +17,9 @@ Node
 * 单元测试，在子模块中npm test,调用测试脚本。 
 * node是单进程单线程，通过事件和回调支持并发
 
-既然我们可以通过V8的调试插件来调试，那是否也可以借用Chrome浏览器的JavaScript调试器来调试呢？node-inspector模块提供了这样一种可能。我们需要先通过npm来安装node-inspector   <br>
+既然我们可以通过V8的调试插件来调试，也可以借用Chrome浏览器的JavaScript调试器来调试？node-inspector模块提供了这样一种可能。<br>
 
 npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
-
-* 使用forEach前最好先对数据进行处理一下，以免出错，:<br>	
-	<% var cards = locals.cards || [];%> <br>
-	<% cards.forEach(function(v,i){%>
 
 * node同事连接多个后台（如java）或者多个数据库配置
 * Nginx最主要的功能是反向代理，负载均衡，是为其他web server服务的。而node.js一般是作为web server使用的，两者的用途不一样，两者的性能比较意义不大。Nginx因为其功能简单，没有太复杂的逻辑，主要解决的I/O (socket)的资源占用(内存，线程)而出名的，它的改进对比对象应该是apache httpd与IIS
@@ -49,3 +45,4 @@ npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
 *  使用ajax时，想node层传递参数时，要封装成json格式，即{‘name’: value},如果单传一个value值得花，node会自动封装成{value: ‘’}，导致出错;
 * node excel导出包 util-excel
 * node在单线程，大型web系统中作为的server端存在很多弊端，go某种意义上是很好地替代品
+* exports 是 module.exports 的一个引用,module.exports 初始值为一个空对象 {}，所以 exports 初始值也是 {},require 引用模块后，返回的是 module.exports 而不是 exports!!!!!,exports.xxx 相当于在导出对象上挂属性，该属性对调用模块直接可见,exports = 相当于给 exports 对象重新赋值，调用模块不能访问 exports 对象及其属性
