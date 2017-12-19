@@ -1,7 +1,6 @@
 mysql
 ======
 
-* 模糊查询select * from order_info where tickets like '%123456%'
 * 连接池
 * mysqldump -u 用户名 -p 数据库名 > 导出的文件名 
 * 使用连接（JOIN）来代替子查询,left join等
@@ -25,5 +24,7 @@ mysql
 * mysql   存储过程的三中变量申明方式declare,set,select
 * show status like 'last_query_cost';查询开销
 * mysql无法插入中文，navcat设置表编码为urf-8,字段编码设置为空或者utf-8
+* mysql修改表存储引擎：  1. Alter table name engine = innodb;
+* mysql5中varchar(n)中的n表示n个字符， 一个汉字作为一个字符处理，因此varchar(10)最多能存储10个汉字。mysql4中varchar(n)中的n表示n个字节，因此在mysql4中varchar(10)就存不了10个汉字
 
 
