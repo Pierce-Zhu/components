@@ -46,3 +46,4 @@ npm install -g node-inspector  // -g 导入安装路径到环境变量 <br>
 * node excel导出包 util-excel
 * node在单线程，大型web系统中作为的server端存在很多弊端，go某种意义上是很好地替代品
 * exports 是 module.exports 的一个引用,module.exports 初始值为一个空对象 {}，所以 exports 初始值也是 {},require 引用模块后，返回的是 module.exports 而不是 exports!!!!!,exports.xxx 相当于在导出对象上挂属性，该属性对调用模块直接可见,exports = 相当于给 exports 对象重新赋值，调用模块不能访问 exports 对象及其属性
+* node cluster模块
